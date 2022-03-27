@@ -1,0 +1,30 @@
+<html>
+<head>
+	<title>wgsl-debug example</title>
+	
+  <script type="module" crossorigin src="/wgsl-debug-example/index.js"></script>
+  <link rel="stylesheet" href="/wgsl-debug-example/index.css">
+</head>
+<body>
+	<div id="left">
+		<h2>WGSL-debug example</h2>
+		<div id="canvas_box">
+			<canvas id="canvas" height="200" width="400"></canvas>
+			<div id="control">
+				<label><input type="checkbox" id="compute_active" checked=true/>compute</label><br/>
+				<label><input type="checkbox" id="debug_active" checked=true/>debug active</label><br/>
+				<label><input type="checkbox" id="debug_visible" checked=true/>debug visible</label><br/>
+				<input type="number" id="debug_uidmax" min="1"/><br/>
+				<button id="debug_uidmax_set">set limit</button>
+				<pre id="stats"></pre>
+			</div>
+		</div>
+		<div id="comments">Red points coordinates are updated in compute shader.<br/>
+The values at each pass are displayed in the table by <a href="https://github.com/looran/wgsl-debug/">wgsl-debug</a>.
+		</div>
+		<pre id="shader_src"></pre>
+	</div>
+	<div id="debug-div"></div>
+	
+</body>
+</html>
